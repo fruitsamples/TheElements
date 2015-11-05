@@ -4,7 +4,7 @@
 ================================================================================
 DESCRIPTION:
 
-TheElements is an iPhone 2.0 SDK application that provides access to the data
+TheElements is an iPhone application that provides access to the data
 contained in the Periodic Table of the Elements. The Periodic Table of the
 Elements catalogs all the known atomic elements in the universe.
 
@@ -39,12 +39,12 @@ application see the ApplicationFlow.pdf included with the project.
 ================================================================================
 BUILD REQUIREMENTS:
 
-Mac OS X 10.5.3, Xcode 3.1, iPhone OS 2.0
+iPhone OS 3.0
 
 ================================================================================
 RUNTIME REQUIREMENTS:
 
-Mac OS X 10.5.3, iPhone OS 2.0
+iPhone OS 3.0
 
 ================================================================================
 PACKAGING LIST:
@@ -173,6 +173,9 @@ as well as a link to the appropriate page on Wikipedia.
 ================================================================================
 CHANGES FROM PREVIOUS VERSIONS:
 
+Version 1.8
+  - Upgraded for 3.0 SDK due to deprecated APIs; in "cellForRowAtIndexPath" it now uses UITableViewCell's initWithStyle.
+
 Version 1.7
   - Updated for and tested with iPhone OS 2.0. First public release.
   - Added additional date to the Element View
@@ -247,7 +250,7 @@ Version 1.1
   - Initial release.
 
 ================================================================================
-Copyright (C) 2008 Apple Inc. All rights reserved.
+Copyright (C) 2008-2009 Apple Inc. All rights reserved.
 
 
 
