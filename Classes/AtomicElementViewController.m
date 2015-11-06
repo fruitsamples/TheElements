@@ -2,7 +2,7 @@
      File: AtomicElementViewController.m
  Abstract: Controller that manages the full tile view of the atomic information,
  creating the reflection, and the flipping of the tile.
-  Version: 1.9
+  Version: 1.11
  
  Disclaimer: IMPORTANT:  This Apple software is supplied to you by Apple
  Inc. ("Apple") in consideration of your agreement to the following
@@ -42,7 +42,7 @@
  STRICT LIABILITY OR OTHERWISE, EVEN IF APPLE HAS BEEN ADVISED OF THE
  POSSIBILITY OF SUCH DAMAGE.
  
- Copyright (C) 2009 Apple Inc. All Rights Reserved.
+ Copyright (C) 2010 Apple Inc. All Rights Reserved.
  
  */
  
@@ -171,7 +171,7 @@
 	[UIView beginAnimations:nil context:nil];
     [UIView setAnimationDuration:0.75];
     [UIView setAnimationDelegate:self];
-    [UIView setAnimationDidStopSelector:@selector(transitionDidStop:finished:context:)];
+    [UIView setAnimationDidStopSelector:@selector(myTransitionDidStop:finished:context:)];
 	
 	// swap the views and transition
     if (frontViewIsVisible==YES) {
@@ -199,7 +199,7 @@
 	[UIView beginAnimations:nil context:nil];
     [UIView setAnimationDuration:0.75];
     [UIView setAnimationDelegate:self];
-    [UIView setAnimationDidStopSelector:@selector(transitionDidStop:finished:context:)];
+    [UIView setAnimationDidStopSelector:@selector(myTransitionDidStop:finished:context:)];
 
 	if (frontViewIsVisible==YES)
 	{
@@ -217,7 +217,7 @@
 }
 
 
-- (void)transitionDidStop:(NSString *)animationID finished:(NSNumber *)finished context:(void *)context {
+- (void)myTransitionDidStop:(NSString *)animationID finished:(NSNumber *)finished context:(void *)context {
 	// re-enable user interaction when the flip is completed.
 	containerView.userInteractionEnabled = YES;
 	flipIndicatorButton.userInteractionEnabled = YES;

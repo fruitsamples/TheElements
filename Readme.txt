@@ -1,22 +1,17 @@
-
 ### TheElements ### 
 
 ================================================================================
 DESCRIPTION:
 
-TheElements is an iPhone application that provides access to the data
-contained in the Periodic Table of the Elements. The Periodic Table of the
-Elements catalogs all the known atomic elements in the universe.
+TheElements is a sample application that provides access to the data contained in the Periodic Table of the Elements. The Periodic Table of the Elements catalogs all the known atomic elements in the universe.
 
-TheElements provides this data in multiple formats, allowing you to sort the
-data by name, atomic number, symbol name, and an elements physical state at
-room temperature.
+TheElements provides this data in multiple formats, allowing you to sort the data by name, atomic number, symbol name, and an elements physical state at room temperature.
 
 TheElements is structured as a Model-View-Controller application. There is
 distinct separation of the model data, the views used to present that data,
 and the controllers which act as a liaison between the model and controller.
 
-The application illustrates the following techniques
+The application illustrates the following techniques:
 
  Configuring and responding to selections in a tab bar
  Displaying information in a tableview using both plain and grouped style table views
@@ -31,7 +26,7 @@ The application illustrates the following techniques
  Creating a reflection of a view in the interface
 
 TheElements is a fairly large application with many classes. This document
-attempts to explain those classes and their roles in the application..
+attempts to explain those classes and their roles in the application.
 
 To understand the flow of screens from one to the next when using the
 application see the ApplicationFlow.pdf included with the project.
@@ -39,12 +34,12 @@ application see the ApplicationFlow.pdf included with the project.
 ================================================================================
 BUILD REQUIREMENTS:
 
-iPhone 3.0 SDK
+iOS 4.0 SDK
 
 ================================================================================
 RUNTIME REQUIREMENTS:
 
-iPhone OS 3.0
+iPhone OS 3.2 or later
 
 ================================================================================
 PACKAGING LIST:
@@ -153,7 +148,6 @@ in the navigation bar shows that there is another view available for the
 content by tapping on the tile.
 
 
-
 AtomicElementView.h
 AtomicElementView.m
 
@@ -161,7 +155,6 @@ The AtomicElementView is displayed in the content of the
 AtomicElementViewController. It displays the atomic name, number, symbol, and
 state of the element. By tapping on the element the display will 'flip' to
 show the AtomicElementFlippedView.
-
 
 
 AtomicElementFlippedView.h
@@ -172,6 +165,9 @@ as well as a link to the appropriate page on Wikipedia.
 
 ================================================================================
 CHANGES FROM PREVIOUS VERSIONS:
+
+Version 1.11
+  - Upgraded project to build with the iOS 4.0 SDK.
 
 Version 1.9
   - Changed the target setting's "Code Signing Identity" to the proper value.
@@ -219,7 +215,6 @@ Version 1.3
       is shown
   - Renamed various element background images to indicate pixel size
 
-
 Version 1.2
   - Updated with API changes for second beta release of iPhone SDK
     - replaced toolbar references with tabBar references throughout.
@@ -248,12 +243,11 @@ Version 1.2
       tableView:sectionForSectionIndexTitle:atIndex: in
       ElementsByNameDataSource.m
 
-
 Version 1.1
   - Initial release.
 
 ================================================================================
-Copyright (C) 2008-2009 Apple Inc. All rights reserved.
+Copyright (C) 2008-2010 Apple Inc. All rights reserved.
 
 
 

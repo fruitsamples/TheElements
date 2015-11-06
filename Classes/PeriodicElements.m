@@ -1,7 +1,7 @@
 /*
      File: PeriodicElements.m
  Abstract: Encapsulates the collection of elements and returns them in presorted states.
-  Version: 1.9
+  Version: 1.11
  
  Disclaimer: IMPORTANT:  This Apple software is supplied to you by Apple
  Inc. ("Apple") in consideration of your agreement to the following
@@ -41,7 +41,7 @@
  STRICT LIABILITY OR OTHERWISE, EVEN IF APPLE HAS BEEN ADVISED OF THE
  POSSIBILITY OF SUCH DAMAGE.
  
- Copyright (C) 2009 Apple Inc. All Rights Reserved.
+ Copyright (C) 2010 Apple Inc. All Rights Reserved.
  
  */
 
@@ -74,15 +74,13 @@
 // we use the singleton approach, one collection for the entire application
 static PeriodicElements *sharedPeriodicElementsInstance = nil;
 
-+ (PeriodicElements*)sharedPeriodicElements {
++ (PeriodicElements *)sharedPeriodicElements
+{
     @synchronized(self) {
-        if (sharedPeriodicElementsInstance == nil) {
-            [[self alloc] init]; // assignment not done here
-        }
+        static dispatch_once_t pred;
+        dispatch_once(&pred, ^{ sharedPeriodicElementsInstance = [[self alloc] init]; });
     }
     return sharedPeriodicElementsInstance;
-	// note: Xcode (3.2) static analyzer will report this singleton as a false positive
-	// '(Potential leak of an object allocated')
 }
  
 + (id)allocWithZone:(NSZone *)zone {
