@@ -1,7 +1,7 @@
 /*
      File: PeriodicElements.h
  Abstract: Encapsulates the collection of elements and returns them in presorted states.
-  Version: 1.8
+  Version: 1.9
  
  Disclaimer: IMPORTANT:  This Apple software is supplied to you by Apple
  Inc. ("Apple") in consideration of your agreement to the following

@@ -1,7 +1,7 @@
 /*
      File: TheElementsAppDelegate.m
  Abstract: Application delegate that sets up the application.
-  Version: 1.8
+  Version: 1.9
  
  Disclaimer: IMPORTANT:  This Apple software is supplied to you by Apple
  Inc. ("Apple") in consideration of your agreement to the following
@@ -71,7 +71,7 @@
 	return self;
 }
 
-- (UINavigationController *)createNavigationControllerWrappingViewControllerForDataSourceOfClass:(Class)datasourceClass {
+- (UINavigationController *)newNavigationControllerWrappingViewControllerForDataSourceOfClass:(Class)datasourceClass {
 	// this is entirely a convenience method to reduce the repetition of the code
 	// in the setupPortaitUserInterface
 	// it returns a retained instance of the UINavigationController class. This is unusual, but 
@@ -136,7 +136,7 @@
 	// wrap it in a UINavigationController, and add that navigationController to the 
 	// viewControllersArray array
 
-	localNavigationController = [self createNavigationControllerWrappingViewControllerForDataSourceOfClass:[ElementsSortedByNameDataSource class]];
+	localNavigationController = [self newNavigationControllerWrappingViewControllerForDataSourceOfClass:[ElementsSortedByNameDataSource class]];
 	[localViewControllersArray addObject:localNavigationController];
 	
 	// the localNavigationController data is now retained by the application delegate
@@ -145,7 +145,7 @@
 	
 	
 	// repeat the process for the ElementsSortedByAtomicNumberDataSource
-	localNavigationController = [self createNavigationControllerWrappingViewControllerForDataSourceOfClass:[ElementsSortedByAtomicNumberDataSource class]];
+	localNavigationController = [self newNavigationControllerWrappingViewControllerForDataSourceOfClass:[ElementsSortedByAtomicNumberDataSource class]];
 	[localViewControllersArray addObject:localNavigationController];
 	
 	// the localNavigationController data is now retained by the application delegate
@@ -154,7 +154,7 @@
 	
 	
 	// repeat the process for the ElementsSortedBySymbolDataSource
-	localNavigationController = [self createNavigationControllerWrappingViewControllerForDataSourceOfClass:[ElementsSortedBySymbolDataSource class]];
+	localNavigationController = [self newNavigationControllerWrappingViewControllerForDataSourceOfClass:[ElementsSortedBySymbolDataSource class]];
 	[localViewControllersArray addObject:localNavigationController];
 	
 	// the localNavigationController data is now retained by the application delegate
@@ -163,7 +163,7 @@
 	
 	
 	// repeat the process for the ElementsSortedByStateDataSource
-	localNavigationController = [self createNavigationControllerWrappingViewControllerForDataSourceOfClass:[ElementsSortedByStateDataSource class]];
+	localNavigationController = [self newNavigationControllerWrappingViewControllerForDataSourceOfClass:[ElementsSortedByStateDataSource class]];
 	[localViewControllersArray addObject:localNavigationController];
 	
 	// the localNavigationController data is now retained by the application delegate

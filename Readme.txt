@@ -39,7 +39,7 @@ application see the ApplicationFlow.pdf included with the project.
 ================================================================================
 BUILD REQUIREMENTS:
 
-iPhone OS 3.0
+iPhone 3.0 SDK
 
 ================================================================================
 RUNTIME REQUIREMENTS:
@@ -172,6 +172,9 @@ as well as a link to the appropriate page on Wikipedia.
 
 ================================================================================
 CHANGES FROM PREVIOUS VERSIONS:
+
+Version 1.9
+  - Changed the target setting's "Code Signing Identity" to the proper value.
 
 Version 1.8
   - Upgraded for 3.0 SDK due to deprecated APIs; in "cellForRowAtIndexPath" it now uses UITableViewCell's initWithStyle.

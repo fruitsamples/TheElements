@@ -2,7 +2,7 @@
      File: AtomicElementViewController.m
  Abstract: Controller that manages the full tile view of the atomic information,
  creating the reflection, and the flipping of the tile.
-  Version: 1.8
+  Version: 1.9
  
  Disclaimer: IMPORTANT:  This Apple software is supplied to you by Apple
  Inc. ("Apple") in consideration of your agreement to the following

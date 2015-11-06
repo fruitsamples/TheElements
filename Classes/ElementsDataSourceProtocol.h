@@ -1,7 +1,7 @@
 /*
      File: ElementsDataSourceProtocol.h
  Abstract: Protocol that defines information each Element tableview datasource must provide.
-  Version: 1.8
+  Version: 1.9
  
  Disclaimer: IMPORTANT:  This Apple software is supplied to you by Apple
  Inc. ("Apple") in consideration of your agreement to the following

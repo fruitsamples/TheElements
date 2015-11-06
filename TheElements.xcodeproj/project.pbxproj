@@ -474,7 +474,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CODE_SIGN_IDENTITY = "Scott Anguish";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
@@ -484,6 +484,7 @@
 				INSTALL_PATH = /Applications;
 				PREBINDING = NO;
 				PRODUCT_NAME = TheElements;
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

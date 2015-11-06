@@ -1,7 +1,7 @@
 /*
      File: PeriodicElements.m
  Abstract: Encapsulates the collection of elements and returns them in presorted states.
-  Version: 1.8
+  Version: 1.9
  
  Disclaimer: IMPORTANT:  This Apple software is supplied to you by Apple
  Inc. ("Apple") in consideration of your agreement to the following
@@ -81,6 +81,8 @@ static PeriodicElements *sharedPeriodicElementsInstance = nil;
         }
     }
     return sharedPeriodicElementsInstance;
+	// note: Xcode (3.2) static analyzer will report this singleton as a false positive
+	// '(Potential leak of an object allocated')
 }
  
 + (id)allocWithZone:(NSZone *)zone {
